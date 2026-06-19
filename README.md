@@ -1,5 +1,10 @@
 # Orpheus TTS
 
+## Forked Documentations
+- [Main Repository Execution Documentation](./README_MAIN_REPO_EXECUTION.md)
+
+---
+
 #### Updates 🔥
 - [5/2025] We've partnered with [Baseten](https://www.baseten.co/blog/canopy-labs-selects-baseten-as-preferred-inference-provider-for-orpheus-tts-model) to bring highly optimized inference to Orpheus at fp8 (more performant) and fp16 (full fidelity) inference. See code and docs [here](/additional_inference_options/baseten_inference_example/README.md).
 
