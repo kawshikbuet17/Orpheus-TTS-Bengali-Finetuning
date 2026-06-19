@@ -79,6 +79,9 @@ def main():
     batch_size = int(config["batch_size"])
     grad_accum = int(config.get("gradient_accumulation_steps", 4))
     save_steps = int(config["save_steps"])
+    save_total_limit = config.get("save_total_limit", 2)
+    save_total_limit = None if save_total_limit is None else int(save_total_limit)
+
     learning_rate = float(config["learning_rate"])
     pad_token = int(config.get("pad_token", 128263))
 
@@ -177,7 +180,7 @@ def main():
 
         save_strategy="steps",
         save_steps=save_steps,
-        save_total_limit=2,
+        save_total_limit=save_total_limit,
 
         bf16=(compute_dtype == torch.bfloat16),
         fp16=(compute_dtype == torch.float16),
