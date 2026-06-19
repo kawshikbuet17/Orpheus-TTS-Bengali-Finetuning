@@ -1,2 +1,7 @@
 .DS_Store
 *wav
+*.log
+checkpoint-*
+adapter-final
+wandb
+data

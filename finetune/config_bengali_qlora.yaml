@@ -1,0 +1,22 @@
+TTS_dataset: "/home/kawshik/tts-testing/Orpheus-TTS/data/bengali-telecom-orpheus-tokenized"
+
+# Base Orpheus model.
+model_name: "canopylabs/orpheus-3b-0.1-pretrained"
+
+# Full fine-tune settings.
+epochs: 1
+batch_size: 2
+gradient_accumulation_steps: 4
+
+pad_token: 128263
+save_steps: 500
+learning_rate: 2.0e-4
+
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+
+# Output.
+save_folder: "checkpoints-bengali-telecom-qlora"
+project_name: "orpheus-bengali-telecom-qlora"
+run_name: "qlora-v1-r16-alpha32-lr2e-4"
